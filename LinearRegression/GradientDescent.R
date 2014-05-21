@@ -1,7 +1,8 @@
 # Linear Regression:
 # Through Gradient Descent
-# LInear regression through gradient descent is almos the exact same as logistic regression
-# The only difference s the hypothesis and cost function.
+# Linear regression through gradient descent is almost the exact
+# same as logistic regression.
+# The only differences are the hypothesis and cost functions.
 
 identity <- function(x)  { x }
 
