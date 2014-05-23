@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git log",
+				"Git: Log"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"replr",
+				"SublimeREPL: R"
+			],
+			[
+				"shwo ",
+				"Show Scala Worksheet"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git Stat",
+				"Git: Status"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git st",
+				"Git: Add Signed Tag"
+			],
+			[
+				"Git: status",
+				"Git: Status"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"repl r",
+				"SublimeREPL: R"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"packain",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"show_scala_worksheet()",
+			"show_scala_worksheet",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/John/Dropbox/Statistics/MCMC/faster.R",
+		"/Users/John/Dropbox/Statistics/MCMC/test2.R",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/John/Dropbox/Statistics/MCMC/test2.out",
+		"/Users/John/.oh-my-zsh/themes/johns.zsh-theme",
+		"/Users/John/.zshrc",
+		"/Users/John/Consulting/Adeline/analysis.R",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/R.sublime-settings",
+		"/Users/John/repos/Scala/patmat/src/main/scala/patmat/Huffman.scala (worksheet)",
+		"/Users/John/repos/MLxmp/LinearRegression/GradientDescent.R",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/John/Desktop/nand2tetris/tools/CPUEmulator.sh",
+		"/Users/John/Desktop/nand2tetris/tools/Assembler.sh",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/DashDoc/Default (OSX).sublime-keymap",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/John/repos/MLxmp/LogisticRegression/GradientDescent.R",
+		"/Users/John/repos/MLxmp/LinearRegression/LeastSquares.R"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"a",
+			"sort",
+			"r12hr",
+			"p24",
+			"r24hr",
+			"sample",
+			"prop.par",
+			"n.enrolled",
+			"acc",
+			"nsim",
+			"sim",
+			"test.points",
+			"is.matrix",
+			"1000"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-commit":
+	{
+		"height": 94.0
+	},
+	"output.git-push":
+	{
+		"height": 94.0
+	},
+	"project": "MLxmp.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 161.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
