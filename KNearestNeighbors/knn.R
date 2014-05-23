@@ -6,7 +6,8 @@
 # points.
 knn <- function(k, test.points, dataset, class.col=1,
 				metric=euclidean,
-				voting.fun=most.frq) {
+				voting.fun=most.frq,
+				prob=FALSE, smooth=0.5) {
 
 	if (!is.numeric(k) | k < 1) stop('K must be a number > 0')
 
@@ -24,7 +25,18 @@ knn <- function(k, test.points, dataset, class.col=1,
 	# TODO: Apply over test.points
 	apply(test.points, 1, function(point) {
 			NNs <- nearest.points(point)[1:k, ]
-			voting.fun(NNs[, class.col], NNs[, ncol(NNs)])
+			cls <- voting.fun(NNs[, class.col], NNs[, ncol(NNs)])
+			print(cls)
+			if (prob) {
+				s <- smooth
+				Ni <- sum(NNs[, class.col] == cls)
+				print(Ni)
+				C <- length(unique(dataset[, class.col]))
+				print(C)
+				return((Ni + s) / (k + C * s))
+			} else {
+				return(cls)
+			}
 		})
 }	
 
