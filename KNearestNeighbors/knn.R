@@ -28,8 +28,22 @@ knn <- function(k, test.points, dataset, class.col=1,
 		})
 }	
 
+# Distance metrics
 euclidean <- function(to, from) {
 	sqrt( sum( (from - to)^2 ) )
+}
+
+# The hamming distance is one metric that can be used on non-numeric
+# data. It is defined as the number of positions, in two strings of
+# length n, that are different from one another.
+hamming.dist <- function(to, from) {
+	if (nchar(to) != nchar(from))
+		stop("The two strings must be of equal length.")
+		
+	to <- unlist(strsplit(to, split=''))
+	from <- unlist(strsplit(from, split=''))
+
+	sum(to != from)
 }
 
 # Reports the most frequent classification.
@@ -39,7 +53,8 @@ most.frq <- function(nbr.class, nbr.distance) {
 	uniq[which.max(tabulate(match(nbr.class, uniq)))]
 }
 
+
 # TODO: Other voting functions and metrics
-#		like the Hamming distance
+
 
 # TODO: Write example script at bottom.
