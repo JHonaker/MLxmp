@@ -13,7 +13,8 @@
 # guarantee that we will converge to the global maximum, more than one
 # run with different starting points are used.
 # We will use the Forgy initialization algorithm:
-# 	Choose k random points and use them as the initialization points.
+# 	Choose k random points from the data set,
+# 	and use them as the initialization points.
 initialization.step <- function(k, dataset) {
 	dataset[sample(1:nrow(dataset), k), ]
 }
