@@ -40,3 +40,24 @@ update.step <- function(dataset, sets) {
 				colSums(dataset[sets == k,])
 		}))
 }
+
+# EXAMPLE:
+example.2.clusters <- function(max.iters=100, tol=0.01) {
+	mean.mat <- array(NA, c(2, 2, 1000))
+
+	dat <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
+           		 matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
+
+	iter <- 1
+	diff <- tol + 1
+	mean.mat[, , iter] <- initialization.step(2, dat)
+	while (iter <= max.iters && diff > tol) {
+		mean.mat[, , iter + 1] <- update.step(dat,
+			assignment.step(dat, mean.mat[, , iter]))
+		
+		iter <- iter + 1
+		diff <- sum(abs(mean.mat[, , iter] - mean.mat[, , iter - 1]))
+	}
+
+	mean.mat[, , 1:iter]
+}
