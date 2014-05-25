@@ -30,9 +30,9 @@ knn <- function(k, test.points, dataset, class.col=1,
 			if (prob) {
 				s <- smooth
 				Ni <- sum(NNs[, class.col] == cls)
-				print(Ni)
+				# DEBUG: print(Ni)
 				C <- length(unique(dataset[, class.col]))
-				print(C)
+				# DEBUG: print(C)
 				return((Ni + s) / (k + C * s))
 			} else {
 				return(cls)
