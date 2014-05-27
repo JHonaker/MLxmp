@@ -26,7 +26,7 @@ knn <- function(k, test.points, dataset, class.col=1,
 	apply(test.points, 1, function(point) {
 			NNs <- nearest.points(point)[1:k, ]
 			cls <- voting.fun(NNs[, class.col], NNs[, ncol(NNs)])
-			print(cls)
+			# DEBUG: print(cls)
 			if (prob) {
 				s <- smooth
 				Ni <- sum(NNs[, class.col] == cls)
