@@ -41,19 +41,21 @@ update.step <- function(dataset, sets) {
 		}))
 }
 
-kmeans <- function(dataset, max.iters=100, tol=0.001, ret.history=FALSE) {
-    test.means <- initialization.step(k, dataset)
-    mean.mat <- array(NA, c(k, ncol(dataset), max.iters))
+kmeans <- function(k, dataset, max.iters=100, tol=0.0001, ret.history=FALSE) {
+
+    mean.mat <- array(NA, dim=c(k, ncol(dataset), max.iters))
+    dataset <- as.matrix(dataset)
 
     iter <- 1
+    mean.mat[, , iter] <- initialization.step(k, dataset)
     diff <- tol + 1
-    while (iter <= max.iters && diff > tol) {
+    while (iter < max.iters & diff > tol) {
         mean.mat[, , iter + 1] <- update.step(dataset,
             assignment.step(dataset, mean.mat[, , iter]))
 
         iter <- iter + 1
         diff <- sum(abs(mean.mat[, , iter] - mean.mat[, , iter - 1]))
-    }
+    } 
 
     if (ret.history == TRUE) {
         return(mean.mat[, , 1:iter])
@@ -90,11 +92,7 @@ example.iris <- function() {
     test.iris <- iris[, 1:4]
     actual.means <- do.call('rbind', by(iris[, 1:4], iris$Species, colMeans))
 
-    test.means <- initialization.step(3, test.iris)
-    for (i in 1:max.iters) {
-        test.means <- update.step(test.iris, 
-            assignment.step(test.iris, test.means))
-    }
+    test.means <- kmeans(3, test.iris)
     print("Actual Means")
     print(actual.means)
     print("Trained Means")
