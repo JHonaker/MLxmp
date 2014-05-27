@@ -41,6 +41,27 @@ update.step <- function(dataset, sets) {
 		}))
 }
 
+kmeans <- function(dataset, max.iters=100, tol=0.001, ret.history=FALSE) {
+    test.means <- initialization.step(k, dataset)
+    mean.mat <- array(NA, c(k, ncol(dataset), max.iters))
+
+    iter <- 1
+    diff <- tol + 1
+    while (iter <= max.iters && diff > tol) {
+        mean.mat[, , iter + 1] <- update.step(dataset,
+            assignment.step(dataset, mean.mat[, , iter]))
+
+        iter <- iter + 1
+        diff <- sum(abs(mean.mat[, , iter] - mean.mat[, , iter - 1]))
+    }
+
+    if (ret.history == TRUE) {
+        return(mean.mat[, , 1:iter])
+    } else {
+        return(mean.mat[, , iter])
+    }
+}
+
 # EXAMPLE:
 example.2.clusters <- function(max.iters=100, tol=0.01) {
 	mean.mat <- array(NA, c(2, 2, max.iters))
