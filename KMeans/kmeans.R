@@ -43,7 +43,7 @@ update.step <- function(dataset, sets) {
 
 # EXAMPLE:
 example.2.clusters <- function(max.iters=100, tol=0.01) {
-	mean.mat <- array(NA, c(2, 2, 1000))
+	mean.mat <- array(NA, c(2, 2, max.iters))
 
 	dat <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
            		 matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
@@ -60,4 +60,22 @@ example.2.clusters <- function(max.iters=100, tol=0.01) {
 	}
 
 	mean.mat[, , 1:iter]
+}
+
+example.iris <- function() {
+    max.iters=100
+
+    data(iris)
+    test.iris <- iris[, 1:4]
+    actual.means <- do.call('rbind', by(iris[, 1:4], iris$Species, colMeans))
+
+    test.means <- initialization.step(3, test.iris)
+    for (i in 1:max.iters) {
+        test.means <- update.step(test.iris, 
+            assignment.step(test.iris, test.means))
+    }
+    print("Actual Means")
+    print(actual.means)
+    print("Trained Means")
+    print(test.means)
 }
