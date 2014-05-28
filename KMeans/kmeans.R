@@ -64,30 +64,24 @@ kmeans <- function(k, dataset, max.iters=100, tol=0.0001, ret.history=FALSE) {
     }
 }
 
-# EXAMPLE:
-example.2.clusters <- function(max.iters=100, tol=0.01) {
-	mean.mat <- array(NA, c(2, 2, max.iters))
+# EXAMPLE: Generates two clusters around (0,0) and (1,1)
+#           Then it attempts to find the centers of these clusters
+#           Finally, plots the data, and the path of convergence 
+#               for each centroid.
+example.2.clusters <- function(tol = 0.0001) {
 
-	dat <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
-           		 matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
+    dat <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
+                 matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
 
-	iter <- 1
-	diff <- tol + 1
-	mean.mat[, , iter] <- initialization.step(2, dat)
-	while (iter <= max.iters && diff > tol) {
-		mean.mat[, , iter + 1] <- update.step(dat,
-			assignment.step(dat, mean.mat[, , iter]))
-		
-		iter <- iter + 1
-		diff <- sum(abs(mean.mat[, , iter] - mean.mat[, , iter - 1]))
-	}
+    mean.mat <- kmeans(2, dat, ret.history=TRUE, tol=tol)    
 
-	mean.mat[, , 1:iter]
+	mean.mat[, , ]
+    plot(dat)
+    lines(t(mean.mat[1,,]), col=2)
+    lines(t(mean.mat[2,,]), col=3)
 }
 
 example.iris <- function() {
-    max.iters=100
-
     data(iris)
     test.iris <- iris[, 1:4]
     actual.means <- do.call('rbind', by(iris[, 1:4], iris$Species, colMeans))
