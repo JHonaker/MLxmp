@@ -2,6 +2,12 @@
 # a decision tree from a dataset. It is fairly simple, and we will
 # use this as an introduction to decision tree learning.
 
+# NOTE: We will limit our implementation to categorical/factor variables
+#		This is to keep the clarity and simplicity of this 
+#		intellectual exercise. It can be easily extended to deal with
+# 		continuous variables by implementing a discretization method
+#		for continuous variables. A popular method is k-means classification.
+
 # First, while not strictly necessary, we will create two R class types:
 # Tree and Node for easier handling of the tree-structure.
 
