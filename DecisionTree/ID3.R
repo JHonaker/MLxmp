@@ -16,8 +16,10 @@
 # another tree or a node at each branch. Notice that we use a list
 # for the branches, so that each tree can contain an arbitrary number
 # of brances.
-tree <- function(val, branch.list) {
-
+tree <- function(root, branches) {
+	structure(list(root=root,
+					branches=branches),
+				class='tree')
 }
 # Node:
 # Node is the used for the terminal location in the trees. Each branch
@@ -26,5 +28,5 @@ tree <- function(val, branch.list) {
 #	2. There are no more attributes to be selected
 #	3. There are no more examples in the subset
 node <- function(val) {
-
+	structure(val, class='node')
 }
