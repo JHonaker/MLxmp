@@ -28,7 +28,7 @@ tree <- function(root, branches) {
 #	2. There are no more attributes to be selected
 #	3. There are no more examples in the subset
 node <- function(val) {
-	structure(val, class='node')
+	structure(as.character(val), class='node')
 }
 
 # Entropy: H(S) - a measure of uncertainty in the set S
@@ -43,9 +43,40 @@ entropy <- function(S) {
 	)
 }
 
-# ID3: The meat of the algorithm
+# ID3: 	The meat of the algorithm
+#		Recursively builds a tree data structure that contians the 
+#		decision tree
 ID3 <- function(dataset, target_attr, attributes) {
+	# If there are no attributes left to classify with,
+	# return the most common class left in the dataset
+	# as a best approximation.
+	if ((length(attributes) - 1) <= 0) {
+		return(node(most.frq(dataset[, target_attr])))
+	}
 
+	# If there is only one classification left, return a
+	# node with that classification as the answer
+	if (length(unique(dataset[, target_attr])) == 1) {
+		return(node(unique(dataset[, target_attr])[1]))
+	}
+
+	best_attr <- attributes[which.min(sapply(attributes, entropy))]
+	rem_attrs <- setdiff(attributes, best_attr)
+	print(best_attr)
+	print(rem_attrs)
+	split_dataset <- split(dataset, dataset[, best_attr])
+	id3_tree <- tree(root=best_attr, 
+		branches=lapply(seq_along(split_dataset), function(i) {
+			name <- names(split_dataset)[i]
+			branch <- split_dataset[[i]]
+			
+			if (nrow(branch) == 0) node(most.frq(dataset[, target_attr]))
+			else tree(root=name, branches=	ID3(branch[, union(target_attr,
+																rem_attrs)],
+												target_attr,
+												rem_attrs))
+	}))
+	id3_tree
 }
 
 # Utility functions: REFACTOR ALL BELOW TO COMMON BASE
