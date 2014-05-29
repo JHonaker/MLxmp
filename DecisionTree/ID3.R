@@ -43,6 +43,11 @@ entropy <- function(S) {
 	)
 }
 
+# ID3: The meat of the algorithm
+ID3 <- function(dataset, target_attr, attributes) {
+
+}
+
 # Utility functions: REFACTOR ALL BELOW TO COMMON BASE
 # Reports the most frequent factor
 # Code taken from: http://stackoverflow.com/a/8189441/2985170
