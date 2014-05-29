@@ -30,3 +30,15 @@ tree <- function(root, branches) {
 node <- function(val) {
 	structure(val, class='node')
 }
+
+# Entropy: H(S) - a measure of uncertainty in the set S
+# H(S) = - sum(p(x) * log2(p(x)) for each subset x of S
+entropy <- function(S) {
+	if (!is.factor(S)) S <- as.factor(S)
+
+	p <- prop.table(table(S))
+
+	-sum(sapply(levels(S),
+		function(name) p[name] * log2(p[name]))
+	)
+}
