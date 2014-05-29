@@ -42,3 +42,11 @@ entropy <- function(S) {
 		function(name) p[name] * log2(p[name]))
 	)
 }
+
+# Utility functions: REFACTOR ALL BELOW TO COMMON BASE
+# Reports the most frequent factor
+# Code taken from: http://stackoverflow.com/a/8189441/2985170
+most.frq <- function(nbr.class, nbr.distance) {
+	uniq <- unique(nbr.class)
+	uniq[which.max(tabulate(match(nbr.class, uniq)))]
+}
