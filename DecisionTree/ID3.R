@@ -17,9 +17,11 @@
 # for the branches, so that each tree can contain an arbitrary number
 # of brances.
 tree <- function(root, branches) {
-	structure(list(root=root,
-					branches=branches),
-				class='tree')
+	if (class(branches) == 'node') return(branches)
+
+	new_tree <- list(branches)
+	names(new_tree) <- root
+	structure(new_tree, class='tree')
 }
 # Node:
 # Node is the used for the terminal location in the trees. Each branch
@@ -46,36 +48,39 @@ entropy <- function(S) {
 # ID3: 	The meat of the algorithm
 #		Recursively builds a tree data structure that contians the 
 #		decision tree
-ID3 <- function(dataset, target_attr, attributes) {
+ID3 <- function(dataset, target_attr,
+					attributes=setdiff(names(dataset), target_attr)) {
 	# If there are no attributes left to classify with,
 	# return the most common class left in the dataset
 	# as a best approximation.
-	if ((length(attributes) - 1) <= 0) {
+	if (length(attributes) <= 0) {
+		# DEBUG: print("attributes ran out")
 		return(node(most.frq(dataset[, target_attr])))
 	}
 
 	# If there is only one classification left, return a
 	# node with that classification as the answer
 	if (length(unique(dataset[, target_attr])) == 1) {
+		# DEBUG: print('one class left')
 		return(node(unique(dataset[, target_attr])[1]))
 	}
 
 	best_attr <- attributes[which.min(sapply(attributes, entropy))]
 	rem_attrs <- setdiff(attributes, best_attr)
-	print(best_attr)
-	print(rem_attrs)
 	split_dataset <- split(dataset, dataset[, best_attr])
-	id3_tree <- tree(root=best_attr, 
-		branches=lapply(seq_along(split_dataset), function(i) {
+	branches <- lapply(seq_along(split_dataset), function(i) {
 			name <- names(split_dataset)[i]
 			branch <- split_dataset[[i]]
 			
 			if (nrow(branch) == 0) node(most.frq(dataset[, target_attr]))
 			else tree(root=name, branches=	ID3(branch[, union(target_attr,
-																rem_attrs)],
+																rem_attrs), drop=FALSE],
 												target_attr,
 												rem_attrs))
-	}))
+			})
+	names(branches) <- names(split_dataset)
+	id3_tree <- tree(root=best_attr, branches=branches)
+
 	id3_tree
 }
 
