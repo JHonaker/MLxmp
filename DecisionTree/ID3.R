@@ -25,8 +25,8 @@ tree <- function(root, branches) {
 # 	1. Every element in the subset belongs to the same class
 #	2. There are no more attributes to be selected
 #	3. There are no more examples in the subset
-node <- function(val) {
-	structure(as.character(val), class='node')
+node <- function(root) {
+	structure(as.character(root), class='node')
 }
 
 # Entropy: H(S) - a measure of uncertainty in the set S
@@ -85,6 +85,22 @@ ID3 <- function(dataset, target_attr,
 
 	id3_tree <- tree(root=best_attr, branches=branches)
 	id3_tree
+}
+
+# The prediciton method:
+# This algorithm isn't really useful if we don't have a way to utilize it.
+# This function takes a tree object created from ID3, and traverses it for
+# each item in the test_obs data frame. The classifications for each item
+# is returned.
+predict_ID3 <- function(test_obs, id3_tree) {
+	traverse <- function(obs, work_tree) {
+		print(work_tree$root) # DEBUG
+		print(obs[work_tree$root]) # DEBUG
+		print(work_tree$branches[[obs[work_tree$root]]]) # DEBUG
+		if (class(work_tree) == 'node') work_tree$root
+		else traverse(obs, work_tree$branches[[obs[work_tree$root]]])
+	}
+	apply(test_obs, 1, traverse, work_tree=id3_tree)
 }
 
 # Utility functions: REFACTOR ALL BELOW TO COMMON BASE
