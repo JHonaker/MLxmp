@@ -26,7 +26,7 @@ tree <- function(root, branches) {
 #	2. There are no more attributes to be selected
 #	3. There are no more examples in the subset
 node <- function(root) {
-	structure(as.character(root), class='node')
+	structure(list(root=as.character(root)), class='node')
 }
 
 # Entropy: H(S) - a measure of uncertainty in the set S
@@ -96,16 +96,10 @@ ID3 <- function(dataset, target_attr,
 # is returned.
 predict_ID3 <- function(test_obs, id3_tree) {
 	traverse <- function(obs, work_tree) {
-		# TODO: traverse won't index because of backticks:
-		#		i.e. `1` instead of "1"
-		print("New depth.") # DEBUG
-		print(work_tree$root) # DEBUG
-		print(obs[work_tree$root]) # DEBUG
-		#print(work_tree$branches[[obs[work_tree$root]]]) # DEBUG
 		if (class(work_tree) == 'node') work_tree$root
 		else {
 			var <- work_tree$root
-			new_tree <- work_tree$branches[[as.character(obs[, var])]]
+			new_tree <- work_tree$branches[[as.character(obs[var])]]
 			traverse(obs, new_tree)
 		}
 	}
