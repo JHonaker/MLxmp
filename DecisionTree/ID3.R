@@ -44,6 +44,8 @@ entropy <- function(S) {
 # ID3: 	The meat of the algorithm
 #		Recursively builds a tree data structure that contians the 
 #		decision tree
+# Note: In order for this implementation to work, all variables in 
+#		the data frame must be factors!
 ID3 <- function(dataset, target_attr,
 					attributes=setdiff(names(dataset), target_attr)) {
 	# If there are no attributes left to classify with,
@@ -94,9 +96,12 @@ ID3 <- function(dataset, target_attr,
 # is returned.
 predict_ID3 <- function(test_obs, id3_tree) {
 	traverse <- function(obs, work_tree) {
+		# TODO: traverse won't index because of backticks:
+		#		i.e. `1` instead of "1"
+		print("New depth.") # DEBUG
 		print(work_tree$root) # DEBUG
 		print(obs[work_tree$root]) # DEBUG
-		print(work_tree$branches[[obs[work_tree$root]]]) # DEBUG
+		#print(work_tree$branches[[obs[work_tree$root]]]) # DEBUG
 		if (class(work_tree) == 'node') work_tree$root
 		else {
 			var <- work_tree$root
