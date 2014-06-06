@@ -106,6 +106,37 @@ predict_ID3 <- function(test_obs, id3_tree) {
 	apply(test_obs, 1, traverse, work_tree=id3_tree)
 }
 
+# Data taken from: http://www.cis.temple.edu/~giorgio/cis587/readings/id3-c45.html
+example <- function() {
+	data <- as.data.frame(rbind(
+	list("sunny"   ,      85     ,    85    , "windy" , "Don't Play"),
+	list("sunny"   ,      80     ,    90    , "wind"  , "Don't Play"),
+	list("overcast",      83     ,    78    , 'calm' , "Play"),
+	list("rain"    ,      70     ,    96    , 'calm' , "Play"),
+	list("rain"    ,      68     ,    80    , 'calm' , "Play"),
+	list("rain"    ,      65     ,    70    , "wind"  , "Don't Play"),
+	list("overcast",      64     ,    65    , "wind"  , "Play"),
+	list("sunny"   ,      72     ,    95    , 'calm' , "Don't Play"),
+	list("sunny"   ,      69     ,    70    , 'calm' , "Play"),
+	list("rain"    ,      75     ,    80    , 'calm' , "Play"),
+	list("sunny"   ,      75     ,    70    , "wind"  , "Play"),
+	list("overcast",      72     ,    90    , "wind"  , "Play"),
+	list("overcast",      81     ,    75    , 'calm' , "Play"),
+	list("rain"    ,      71     ,    80    , "wind"  , "Don't Play")))
+	names(data) <- c('outlook', 'temperature', 'humidity', 'windy', 'play')
+	data$temperature <- as.numeric(data$temperature)
+	data$humidity <- as.numeric(data$humidity)
+	data$windy <- as.factor(unlist(data$windy))
+	data$outlook <- as.factor(unlist(data$outlook))
+	data$play <- as.factor(unlist(data$play))
+	data$temperature <- cut(data$temperature, breaks = c(0, 75, max(data$temperature)))
+	data$humidity <- cut(data$humidity, breaks = c(0, 75, max(data$humidity)))
+
+	decision.tree <- ID3(data[-1, ], 'play')
+
+	predict_ID3(data[1,], decision.tree)
+}
+
 # Utility functions: REFACTOR ALL BELOW TO COMMON BASE
 # Reports the most frequent factor
 # Code taken from: http://stackoverflow.com/a/8189441/2985170
