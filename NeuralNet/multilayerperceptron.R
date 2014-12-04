@@ -1,3 +1,5 @@
+source('../utility.R')
+
 layer = function(inputs = 2, nodes = 3) {
 	weights = matrix(runif((inputs + 1) * nodes),
 		ncol = inputs + 1,
@@ -23,10 +25,10 @@ nnet <- function(inputs, hiddenlayers, hiddennodes, outputs) {
 	layers
 }
 
-predict.nnet = function(nnet, inputs) {
+predict.nnet = function(nnet, inputs, activation.fun = sigmoid) {
 	feedforward = function(input, network) {
 		if (length(network) == 0) input
-		else feedforward(a[[1]] %*% c(1, input), network[-1])
+		else feedforward(activation.fun(network[[1]] %*% c(1, input)), network[-1])
 	}
 
 	feedforward(inputs, nnet)
