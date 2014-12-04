@@ -3,15 +3,65 @@
 	{
 		"selected_items":
 		[
+			[
+				"as.",
+				"as.factor"
+			],
+			[
+				"branc",
+				"branches"
+			],
+			[
+				"frenc",
+				"french_fries"
+			],
+			[
+				"split",
+				"split_dataset"
+			],
+			[
+				"best",
+				"best_attr"
+			],
+			[
+				"assign",
+				"assignment.step"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "KMeans/kmeans.R",
+			"settings":
+			{
+				"buffer_size": 3202,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "DecisionTree/ID3.R",
+			"settings":
+			{
+				"buffer_size": 5855,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\nR version 3.1.0 (2014-04-10) -- \"Spring Dance\"\nCopyright (C) 2014 The R Foundation for Statistical Computing\nPlatform: x86_64-apple-darwin13.1.0 (64-bit)\n\nR is free software and comes with ABSOLUTELY NO WARRANTY.\nYou are welcome to redistribute it under certain conditions.\nType 'license()' or 'licence()' for distribution details.\n\n  Natural language support but running in an English locale\n\nR is a collaborative project with many contributors.\nType 'contributors()' for more information and\n'citation()' on how to cite R or R packages in publications.\n\nType 'demo()' for some demos, 'help()' for on-line help, or\n'help.start()' for an HTML browser interface to help.\nType 'q()' to quit R.\n\nWarning: The R output will not be colorized because it seems that your terminal does not support ANSI escape codes.\nSys.getenv('TERM') returned ''.\n> c(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\")\n[1] \"sunny\"      \"85\"         \"85\"         \"FALSE\"      \"Don't Play\"\n> list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\")\n[[1]]\n[1] \"sunny\"\n\n[[2]]\n[1] 85\n\n[[3]]\n[1] 85\n\n[[4]]\n[1] FALSE\n\n[[5]]\n[1] \"Don't Play\"\n\n> rbind((list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\"),\nError: unexpected ',' in \"rbind((list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\"),\"\n> list(\"sunny\"   ,      80     ,    90    , TRUE  , \"Don't Play\"),\nError: unexpected ',' in \"list(\"sunny\"   ,      80     ,    90    , TRUE  , \"Don't Play\"),\"\n> list(\"overcast\",      83     ,    78    , FALSE , \"Play\"),\nError: unexpected ',' in \"list(\"overcast\",      83     ,    78    , FALSE , \"Play\"),\"\n> list(\"rain\"    ,      70     ,    96    , FALSE , \"Play\"),\nError: unexpected ',' in \"list(\"rain\"    ,      70     ,    96    , FALSE , \"Play\"),\"\n> list(\"rain\"    ,      68     ,    80    , FALSE , \"Play\"),\nError: unexpected ',' in \"list(\"rain\"    ,      68     ,    80    , FALSE , \"Play\"),\"\n> list(\"rain\"    ,      65     ,    70    , TRUE  , \"Don't Play\"),\nError: unexpected ',' in \"list(\"rain\"    ,      65     ,    70    , TRUE  , \"Don't Play\"),\"\n> list(\"overcast\",      64     ,    65    , TRUE  , \"Play\"),\nError: unexpected ',' in \"list(\"overcast\",      64     ,    65    , TRUE  , \"Play\"),\"\n> list(\"sunny\"   ,      72     ,    95    , FALSE , \"Don't Play\"),\nError: unexpected ',' in \"list(\"sunny\"   ,      72     ,    95    , FALSE , \"Don't Play\"),\"\n> list(\"sunny\"   ,      69     ,    70    , FALSE , \"Play\"),\nError: unexpected ',' in \"list(\"sunny\"   ,      69     ,    70    , FALSE , \"Play\"),\"\n> list(\"rain\"    ,      75     ,    80    , FALSE , \"Play\"),\nError: unexpected ',' in \"list(\"rain\"    ,      75     ,    80    , FALSE , \"Play\"),\"\n> list(\"sunny\"   ,      75     ,    70    , TRUE  , \"Play\"),\nError: unexpected ',' in \"list(\"sunny\"   ,      75     ,    70    , TRUE  , \"Play\"),\"\n> list(\"overcast\",      72     ,    90    , TRUE  , \"Play\"),\nError: unexpected ',' in \"list(\"overcast\",      72     ,    90    , TRUE  , \"Play\"),\"\n> list(\"overcast\",      81     ,    75    , FALSE , \"Play\"),\nError: unexpected ',' in \"list(\"overcast\",      81     ,    75    , FALSE , \"Play\"),\"\n> list(\"rain\"    ,      71     ,    80    , TRUE  , \"Don't Play\"))\nError: unexpected ')' in \"list(\"rain\"    ,      71     ,    80    , TRUE  , \"Don't Play\"))\"\n> rbind(list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      80     ,    90    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      83     ,    78    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      70     ,    96    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      68     ,    80    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      65     ,    70    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      64     ,    65    , TRUE  , \"Play\"),\n+ list(\"sunny\"   ,      72     ,    95    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      69     ,    70    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      75     ,    80    , FALSE , \"Play\"),\n+ list(\"sunny\"   ,      75     ,    70    , TRUE  , \"Play\"),\n+ list(\"overcast\",      72     ,    90    , TRUE  , \"Play\"),\n+ list(\"overcast\",      81     ,    75    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      71     ,    80    , TRUE  , \"Don't Play\"))\n      [,1]       [,2] [,3] [,4]  [,5]        \n [1,] \"sunny\"    85   85   FALSE \"Don't Play\"\n [2,] \"sunny\"    80   90   TRUE  \"Don't Play\"\n [3,] \"overcast\" 83   78   FALSE \"Play\"      \n [4,] \"rain\"     70   96   FALSE \"Play\"      \n [5,] \"rain\"     68   80   FALSE \"Play\"      \n [6,] \"rain\"     65   70   TRUE  \"Don't Play\"\n [7,] \"overcast\" 64   65   TRUE  \"Play\"      \n [8,] \"sunny\"    72   95   FALSE \"Don't Play\"\n [9,] \"sunny\"    69   70   FALSE \"Play\"      \n[10,] \"rain\"     75   80   FALSE \"Play\"      \n[11,] \"sunny\"    75   70   TRUE  \"Play\"      \n[12,] \"overcast\" 72   90   TRUE  \"Play\"      \n[13,] \"overcast\" 81   75   FALSE \"Play\"      \n[14,] \"rain\"     71   80   TRUE  \"Don't Play\"\n> \n> data <-\n+ rbind(\n+ list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      80     ,    90    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      83     ,    78    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      70     ,    96    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      68     ,    80    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      65     ,    70    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      64     ,    65    , TRUE  , \"Play\"),\n+ list(\"sunny\"   ,      72     ,    95    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      69     ,    70    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      75     ,    80    , FALSE , \"Play\"),\n+ list(\"sunny\"   ,      75     ,    70    , TRUE  , \"Play\"),\n+ list(\"overcast\",      72     ,    90    , TRUE  , \"Play\"),\n+ list(\"overcast\",      81     ,    75    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      71     ,    80    , TRUE  , \"Don't Play\"))\n> names(data) <- c('outlook', 'temperature', 'humidity', 'windy', 'play')\n> \n> data\n      [,1]       [,2] [,3] [,4]  [,5]        \n [1,] \"sunny\"    85   85   FALSE \"Don't Play\"\n [2,] \"sunny\"    80   90   TRUE  \"Don't Play\"\n [3,] \"overcast\" 83   78   FALSE \"Play\"      \n [4,] \"rain\"     70   96   FALSE \"Play\"      \n [5,] \"rain\"     68   80   FALSE \"Play\"      \n [6,] \"rain\"     65   70   TRUE  \"Don't Play\"\n [7,] \"overcast\" 64   65   TRUE  \"Play\"      \n [8,] \"sunny\"    72   95   FALSE \"Don't Play\"\n [9,] \"sunny\"    69   70   FALSE \"Play\"      \n[10,] \"rain\"     75   80   FALSE \"Play\"      \n[11,] \"sunny\"    75   70   TRUE  \"Play\"      \n[12,] \"overcast\" 72   90   TRUE  \"Play\"      \n[13,] \"overcast\" 81   75   FALSE \"Play\"      \n[14,] \"rain\"     71   80   TRUE  \"Don't Play\"\nattr(,\"names\")\n [1] \"outlook\"     \"temperature\" \"humidity\"    \"windy\"       \"play\"       \n [6] NA            NA            NA            NA            NA           \n[11] NA            NA            NA            NA            NA           \n[16] NA            NA            NA            NA            NA           \n[21] NA            NA            NA            NA            NA           \n[26] NA            NA            NA            NA            NA           \n[31] NA            NA            NA            NA            NA           \n[36] NA            NA            NA            NA            NA           \n[41] NA            NA            NA            NA            NA           \n[46] NA            NA            NA            NA            NA           \n[51] NA            NA            NA            NA            NA           \n[56] NA            NA            NA            NA            NA           \n[61] NA            NA            NA            NA            NA           \n[66] NA            NA            NA            NA            NA           \n> data <- rbind(\n+ list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      80     ,    90    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      83     ,    78    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      70     ,    96    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      68     ,    80    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      65     ,    70    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      64     ,    65    , TRUE  , \"Play\"),\n+ list(\"sunny\"   ,      72     ,    95    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      69     ,    70    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      75     ,    80    , FALSE , \"Play\"),\n+ list(\"sunny\"   ,      75     ,    70    , TRUE  , \"Play\"),\n+ list(\"overcast\",      72     ,    90    , TRUE  , \"Play\"),\n+ list(\"overcast\",      81     ,    75    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      71     ,    80    , TRUE  , \"Don't Play\"))\n> names(data) <- c('outlook', 'temperature', 'humidity', 'windy', 'play')\n> \n> data\n      [,1]       [,2] [,3] [,4]  [,5]        \n [1,] \"sunny\"    85   85   FALSE \"Don't Play\"\n [2,] \"sunny\"    80   90   TRUE  \"Don't Play\"\n [3,] \"overcast\" 83   78   FALSE \"Play\"      \n [4,] \"rain\"     70   96   FALSE \"Play\"      \n [5,] \"rain\"     68   80   FALSE \"Play\"      \n [6,] \"rain\"     65   70   TRUE  \"Don't Play\"\n [7,] \"overcast\" 64   65   TRUE  \"Play\"      \n [8,] \"sunny\"    72   95   FALSE \"Don't Play\"\n [9,] \"sunny\"    69   70   FALSE \"Play\"      \n[10,] \"rain\"     75   80   FALSE \"Play\"      \n[11,] \"sunny\"    75   70   TRUE  \"Play\"      \n[12,] \"overcast\" 72   90   TRUE  \"Play\"      \n[13,] \"overcast\" 81   75   FALSE \"Play\"      \n[14,] \"rain\"     71   80   TRUE  \"Don't Play\"\nattr(,\"names\")\n [1] \"outlook\"     \"temperature\" \"humidity\"    \"windy\"       \"play\"       \n [6] NA            NA            NA            NA            NA           \n[11] NA            NA            NA            NA            NA           \n[16] NA            NA            NA            NA            NA           \n[21] NA            NA            NA            NA            NA           \n[26] NA            NA            NA            NA            NA           \n[31] NA            NA            NA            NA            NA           \n[36] NA            NA            NA            NA            NA           \n[41] NA            NA            NA            NA            NA           \n[46] NA            NA            NA            NA            NA           \n[51] NA            NA            NA            NA            NA           \n[56] NA            NA            NA            NA            NA           \n[61] NA            NA            NA            NA            NA           \n[66] NA            NA            NA            NA            NA           \n> class(data)\n[1] \"matrix\"\n> class(data[,2])\n[1] \"list\"\n> class(data[,3])\n[1] \"list\"\n> class(data[1,])\n[1] \"list\"\n> class(data[1,2])\n[1] \"list\"\n> data <- as.data.frame(rbind(\n+ list(\"sunny\"   ,      85     ,    85    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      80     ,    90    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      83     ,    78    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      70     ,    96    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      68     ,    80    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      65     ,    70    , TRUE  , \"Don't Play\"),\n+ list(\"overcast\",      64     ,    65    , TRUE  , \"Play\"),\n+ list(\"sunny\"   ,      72     ,    95    , FALSE , \"Don't Play\"),\n+ list(\"sunny\"   ,      69     ,    70    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      75     ,    80    , FALSE , \"Play\"),\n+ list(\"sunny\"   ,      75     ,    70    , TRUE  , \"Play\"),\n+ list(\"overcast\",      72     ,    90    , TRUE  , \"Play\"),\n+ list(\"overcast\",      81     ,    75    , FALSE , \"Play\"),\n+ list(\"rain\"    ,      71     ,    80    , TRUE  , \"Don't Play\")))\n> names(data) <- c('outlook', 'temperature', 'humidity', 'windy', 'play')\n> \n> data\n    outlook temperature humidity windy       play\n1     sunny          85       85 FALSE Don't Play\n2     sunny          80       90  TRUE Don't Play\n3  overcast          83       78 FALSE       Play\n4      rain          70       96 FALSE       Play\n5      rain          68       80 FALSE       Play\n6      rain          65       70  TRUE Don't Play\n7  overcast          64       65  TRUE       Play\n8     sunny          72       95 FALSE Don't Play\n9     sunny          69       70 FALSE       Play\n10     rain          75       80 FALSE       Play\n11    sunny          75       70  TRUE       Play\n12 overcast          72       90  TRUE       Play\n13 overcast          81       75 FALSE       Play\n14     rain          71       80  TRUE Don't Play\n> cut(data$temperature, c(75))\nError in cut.default(data$temperature, c(75)) : 'x' must be numeric\n> cut(data$temperature\n+ )\nError in cut.default(data$temperature) : 'x' must be numeric\n> data$temperature <- cut(data$temperature, breaks = c(75, max(data$temperatu<ata$temperature, breaks = c(75, max(data$temperatur                        e)))\nError in cut.default(data$temperature, breaks = c(75, max(data$temperature))) : \n  'x' must be numeric\n> class(data$temperature)\n[1] \"list\"\n> data$temperature <- as.numeric(data$temperature)\n> data$humidity <- as.numeric(data$humidity)\n> data$windy <- as.factor(data$windy)\nError in sort.list(y) : 'x' must be atomic for 'sort.list'\nHave you called 'sort' on a list?\n> data$outlook <- as.factor(data$outlook)\nError in sort.list(y) : 'x' must be atomic for 'sort.list'\nHave you called 'sort' on a list?\n> data$play <- as.factor(data$play)\nError in sort.list(y) : 'x' must be atomic for 'sort.list'\nHave you called 'sort' on a list?\n> data$temperature <- cut(data$temperature, breaks = c(75, max(data$temperatu<ata$temperature, breaks = c(75, max(data$temperatur                        e)))\n> \n> data$humidity <- as.numeric(data$humidity)\n> data$windy <- as.factor(unlist(data$windy))\n> data$outlook <- as.factor(unlist(data$outlook))\n> data$play <- as.factor(unlist(data$play))\n> data$temperature <- cut(data$temperature, breaks = c(75, max(data$temperatu<ata$temperature, breaks = c(75, max(data$temperatur                        e)))\nError in cut.default(data$temperature, breaks = c(75, max(data$temperature))) : \n  'x' must be numeric\n> data <- as.data.frame(rbind(\n+ list(\"sunny\"   ,      85     ,    85    , \"windy\" , \"Don't Play\"),\n+ list(\"sunny\"   ,      80     ,    90    , \"wind\"  , \"Don't Play\"),\n+ list(\"overcast\",      83     ,    78    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      70     ,    96    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      68     ,    80    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      65     ,    70    , \"wind\"  , \"Don't Play\"),\n+ list(\"overcast\",      64     ,    65    , \"wind\"  , \"Play\"),\n+ list(\"sunny\"   ,      72     ,    95    , 'calm' , \"Don't Play\"),\n+ list(\"sunny\"   ,      69     ,    70    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      75     ,    80    , 'calm' , \"Play\"),\n+ list(\"sunny\"   ,      75     ,    70    , \"wind\"  , \"Play\"),\n+ list(\"overcast\",      72     ,    90    , \"wind\"  , \"Play\"),\n+ list(\"overcast\",      81     ,    75    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      71     ,    80    , \"wind\"  , \"Don't Play\")))\n> names(data) <- c('outlook', 'temperature', 'humidity', 'windy', 'play')\n> data$temperature <- as.numeric(data$temperature)\n> data$humidity <- as.numeric(data$humidity)\n> data$windy <- as.factor(unlist(data$windy))\n> data$outlook <- as.factor(unlist(data$outlook))\n> data$play <- as.factor(unlist(data$play))\n> data$temperature <- cut(data$temperature, breaks = c(75, max(data$temperatu<ata$temperature, breaks = c(75, max(data$temperatur                        e)))\n> \n> data\n    outlook temperature humidity windy       play\n1     sunny     (75,85]       85 windy Don't Play\n2     sunny     (75,85]       90  wind Don't Play\n3  overcast     (75,85]       78  calm       Play\n4      rain        <NA>       96  calm       Play\n5      rain        <NA>       80  calm       Play\n6      rain        <NA>       70  wind Don't Play\n7  overcast        <NA>       65  wind       Play\n8     sunny        <NA>       95  calm Don't Play\n9     sunny        <NA>       70  calm       Play\n10     rain        <NA>       80  calm       Play\n11    sunny        <NA>       70  wind       Play\n12 overcast        <NA>       90  wind       Play\n13 overcast     (75,85]       75  calm       Play\n14     rain        <NA>       80  wind Don't Play\n> # ID3 or 'Iterative Dichotomizer 3' is and algorithm for creating\n> # a decision tree from a dataset. It is fairly simple, and we will\n> # use this as an introduction to decision tree learning.\n> \n> # NOTE: We will limit our implementation to categorical/factor variables\n> #This is to keep the clarity and simplicity of this \n> #intellectual exercise. It can be easily extended to deal with\n> # continuous variables by implementing a discretization method\n> #for continuous variables. A popular method is k-means classification.\n> \n> # First, while not strictly necessary, we will create two R class types:\n> # Tree and Node for easier handling of the tree-structure.\n> \n> # Tree:\n> # Tree will be used in a recursive structure that contians a either\n> # another tree or a node at each branch. Notice that we use a list\n> # for the branches, so that each tree can contain an arbitrary number\n> # of brances.\n> tree <- function(root, branches) {\n+ structure(list(root=root, branches=branches), class='tree')\n+ }\n> # Node:\n> # Node is the used for the terminal location in the trees. Each branch\n> # that contains a node will signify that the algorithm has either:\n> # 1. Every element in the subset belongs to the same class\n> #2. There are no more attributes to be selected\n> #3. There are no more examples in the subset\n> node <- function(root) {\n+ structure(list(root=as.character(root)), class='node')\n+ }\n> \n> # Entropy: H(S) - a measure of uncertainty in the set S\n> # H(S) = - sum(p(x) * log2(p(x)) for each subset x of S\n> entropy <- function(S) {\n+ if (!is.factor(S)) S <- as.factor(S)\n+ \n+ p <- prop.table(table(S))\n+ \n+ -sum(sapply(levels(S),\n+ function(name) p[name] * log2(p[name]))\n+ )\n+ }\n> \n> # ID3: The meat of the algorithm\n> #Recursively builds a tree data structure that contians the \n> #decision tree\n> # Note: In order for this implementation to work, all variables in \n> #the data frame must be factors!\n> ID3 <- function(dataset, target_attr,\n+ attributes=setdiff(names(dataset), target_attr)) {\n+ # If there are no attributes left to classify with,\n+ # return the most common class left in the dataset\n+ # as a best approximation.\n+ if (length(attributes) <= 0) {\n+ # DEBUG: print(\"attributes ran out\")\n+ return(node(most.frq(dataset[, target_attr])))\n+ }\n+ \n+ # If there is only one classification left, return a\n+ # node with that classification as the answer\n+ if (length(unique(dataset[, target_attr])) == 1) {\n+ # DEBUG: print('one class left')\n+ return(node(unique(dataset[, target_attr])[1]))\n+ }\n+ \n+ # Select the best attribute based on the minimum entropy\n+ best_attr <- attributes[which.min(sapply(attributes, entropy))]\n+ # Create the set of remaining attributes\n+ rem_attrs <- setdiff(attributes, best_attr)\n+ # Split the dataset into groups based on levels of the best_attr\n+ split_dataset <- split(dataset, dataset[, best_attr])\n+ # Recursively branch to create the tree.\n+ branches <- lapply(seq_along(split_dataset), function(i) {\n+ # The name of the branch\n+ name <- names(split_dataset)[i]\n+ # Get branch data\n+ branch <- split_dataset[[i]]\n+ \n+ # If there is no data, return the most frequent class in\n+ # the parent, otherwise start over with new branch data.\n+ if (nrow(branch) == 0) node(most.frq(dataset[, target_attr]))\n+ else ID3(branch[, union(target_attr, rem_attrs), drop=FALSE],\n+ target_attr,\n+ rem_attrs)\n+ })\n+ names(branches) <- names(split_dataset)\n+ \n+ id3_tree <- tree(root=best_attr, branches=branches)\n+ id3_tree\n+ }\n> \n> # The prediciton method:\n> # This algorithm isn't really useful if we don't have a way to utilize it.\n> # This function takes a tree object created from ID3, and traverses it for\n> # each item in the test_obs data frame. The classifications for each item\n> # is returned.\n> predict_ID3 <- function(test_obs, id3_tree) {\n+ traverse <- function(obs, work_tree) {\n+ if (class(work_tree) == 'node') work_tree$root\n+ else {\n+ var <- work_tree$root\n+ new_tree <- work_tree$branches[[as.character(obs[var])]]\n+ traverse(obs, new_tree)\n+ }\n+ }\n+ apply(test_obs, 1, traverse, work_tree=id3_tree)\n+ }\n> \n> # Data taken from: http://www.cis.temple.edu/~giorgio/cis587/readings/id3-c</www.cis.temple.edu/~giorgio/cis587/readings/id3-c4                        5.html\n> example <- function() {\n+ data <- as.data.frame(rbind(\n+ list(\"sunny\"   ,      85     ,    85    , \"windy\" , \"Don't Play\"),\n+ list(\"sunny\"   ,      80     ,    90    , \"wind\"  , \"Don't Play\"),\n+ list(\"overcast\",      83     ,    78    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      70     ,    96    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      68     ,    80    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      65     ,    70    , \"wind\"  , \"Don't Play\"),\n+ list(\"overcast\",      64     ,    65    , \"wind\"  , \"Play\"),\n+ list(\"sunny\"   ,      72     ,    95    , 'calm' , \"Don't Play\"),\n+ list(\"sunny\"   ,      69     ,    70    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      75     ,    80    , 'calm' , \"Play\"),\n+ list(\"sunny\"   ,      75     ,    70    , \"wind\"  , \"Play\"),\n+ list(\"overcast\",      72     ,    90    , \"wind\"  , \"Play\"),\n+ list(\"overcast\",      81     ,    75    , 'calm' , \"Play\"),\n+ list(\"rain\"    ,      71     ,    80    , \"wind\"  , \"Don't Play\")))\n+ names(data) <- c('outlook', 'temperature', 'humidity', 'windy', 'play')\n+ data$temperature <- as.numeric(data$temperature)\n+ data$humidity <- as.numeric(data$humidity)\n+ data$windy <- as.factor(unlist(data$windy))\n+ data$outlook <- as.factor(unlist(data$outlook))\n+ data$play <- as.factor(unlist(data$play))\n+ data$temperature <- cut(data$temperature, breaks = c(0, 75, max(data$temper<ata$temperature, breaks = c(0, 75, max(data$tempera                        ture)))\n+ data$humidity <- cut(data$humidity, breaks = c(0, 75, max(data$humidity)))\n+ \n+ decision.tree <- ID3(data[-1, ], 'play')\n+ \n+ predict_ID3(data[1,], decision.tree)\n+ }\n> \n> # Utility functions: REFACTOR ALL BELOW TO COMMON BASE\n> # Reports the most frequent factor\n> # Code taken from: http://stackoverflow.com/a/8189441/2985170\n> most.frq <- function(nbr.class, nbr.distance) {\n+ uniq <- unique(nbr.class)\n+ uniq[which.max(tabulate(match(nbr.class, uniq)))]\n+ }\n> ",
+			"settings":
+			{
+				"buffer_size": 22381,
+				"line_ending": "Unix",
+				"name": "*REPL* [r]",
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 160.0,
 		"selected_items":
 		[
 			[
@@ -19,24 +69,64 @@
 				"Git: Push"
 			],
 			[
+				"repl",
+				"SublimeREPL: R"
+			],
+			[
 				"git status",
 				"Git: Status"
 			],
 			[
-				"git log",
-				"Git: Log"
+				"git sts",
+				"Git: Stash"
+			],
+			[
+				"replr",
+				"SublimeREPL: R"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"git sta",
+				"Git: Stash"
+			],
+			[
+				"repl r",
+				"SublimeREPL: R"
 			],
 			[
 				"git statu",
 				"Git: Status"
 			],
 			[
-				"status",
-				"Git: Status"
+				"git stata",
+				"Git: Stash Include Untracked"
 			],
 			[
-				"replr",
-				"SublimeREPL: R"
+				"git ",
+				"Git: Log"
+			],
+			[
+				"git quick add",
+				"Git: Quick Add"
+			],
+			[
+				"git log",
+				"Git: Log"
+			],
+			[
+				"status",
+				"Git: Status"
 			],
 			[
 				"shwo ",
@@ -51,10 +141,6 @@
 				"Git: Status"
 			],
 			[
-				"git stat",
-				"Git: Status"
-			],
-			[
 				"git st",
 				"Git: Add Signed Tag"
 			],
@@ -65,10 +151,6 @@
 			[
 				"inst",
 				"Package Control: Install Package"
-			],
-			[
-				"repl r",
-				"SublimeREPL: R"
 			],
 			[
 				"insta",
@@ -99,7 +181,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 489.0
+		"width": 424.0
 	},
 	"console":
 	{
@@ -122,20 +204,26 @@
 	},
 	"file_history":
 	[
+		"/Users/John/repos/MLxmp/DecisionTree/ID3",
+		"/Users/John/repos/MLxmp/KMeans/kmeans.R",
+		"/Users/John/repos/MLxmp/KNearestNeighbors/knn.R",
+		"/Users/John/OCTGN/Config/settings.json",
+		"/Users/John/repos/MLxmp/KMeans/untitled",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/R.sublime-settings",
+		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/R Console.sublime-settings",
 		"/Users/John/Dropbox/Statistics/MCMC/faster.R",
 		"/Users/John/Dropbox/Statistics/MCMC/test2.R",
-		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/John/Dropbox/Statistics/MCMC/test2.out",
 		"/Users/John/.oh-my-zsh/themes/johns.zsh-theme",
 		"/Users/John/.zshrc",
 		"/Users/John/Consulting/Adeline/analysis.R",
-		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/R.sublime-settings",
 		"/Users/John/repos/Scala/patmat/src/main/scala/patmat/Huffman.scala (worksheet)",
 		"/Users/John/repos/MLxmp/LinearRegression/GradientDescent.R",
 		"/Users/John/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/John/Desktop/nand2tetris/tools/CPUEmulator.sh",
 		"/Users/John/Desktop/nand2tetris/tools/Assembler.sh",
-		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/John/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/John/Library/Application Support/Sublime Text 3/Packages/DashDoc/Default (OSX).sublime-keymap",
 		"/Users/John/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
@@ -144,13 +232,15 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"ID3.R",
+			""
 		]
 	},
 	"find_state":
@@ -158,6 +248,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"FALSE",
+			"TRUE",
+			"Play",
+			"Don't Play",
+			"true",
+			"false",
+			"rain",
+			"overcast",
+			"sunny",
+			"|",
+			"$b",
+			"$a",
+			"belongs",
+			"tree",
+			"new_treee",
+			"root",
+			"attributes",
+			"mean.mat",
+			"assignment.step",
+			"smooth",
+			"dataset",
+			"data",
+			"formula",
 			"a",
 			"sort",
 			"r12hr",
@@ -174,11 +287,12 @@
 			"1000"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			","
 		],
 		"reverse": false,
 		"show_context": true,
@@ -189,8 +303,193 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "KMeans/kmeans.R",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1940,
+								1940
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "DecisionTree/ID3.R",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5855,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+								],
+								"scope": "bookmarks"
+							},
+							"mark":
+							{
+								"flags": 144,
+								"icon": "dot",
+								"regions":
+								[
+								],
+								"scope": "mark"
+							}
+						},
+						"selection":
+						[
+							[
+								1281,
+								1281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22381,
+								22381
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"auto_indent": false,
+							"detect_indentation": false,
+							"gutter": false,
+							"history_arrows": true,
+							"indent_subsequent_lines": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "r",
+							"repl_id": "c577ec0849f64a03b364abfb5cbc83a5",
+							"repl_restart_args":
+							{
+								"additional_scopes":
+								[
+									"tex.latex.knitr"
+								],
+								"cmd":
+								{
+									"linux":
+									[
+										"R",
+										"--interactive",
+										"--no-readline"
+									],
+									"osx":
+									[
+										"R",
+										"--interactive",
+										"--no-readline"
+									],
+									"windows":
+									[
+										"Rterm.exe",
+										"--ess",
+										"--encoding=$win_cmd_encoding"
+									]
+								},
+								"cmd_postfix": "\n",
+								"cwd": "$file_path",
+								"encoding":
+								{
+									"linux": "utf8",
+									"osx": "utf8",
+									"windows": "$win_cmd_encoding"
+								},
+								"extend_env":
+								{
+									"linux":
+									{
+										"PATH": "{PATH}:/usr/local/bin"
+									},
+									"osx":
+									{
+										"PATH": "{PATH}:/usr/local/bin"
+									},
+									"windows":
+									{
+									}
+								},
+								"external_id": "r",
+								"soft_quit": "\nquit(save=\"no\")\n",
+								"suppress_echo":
+								{
+									"linux": true,
+									"osx": true,
+									"windows": false
+								},
+								"syntax": "Packages/R/R Console.tmLanguage",
+								"type": "subprocess"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+							"syntax": "Packages/R/R Console.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5638.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -211,11 +510,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -260,16 +566,24 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"mcmc",
+				"~/repos/Scala/patmat/src/main/scala/patmat/MCMC.sublime-project"
+			],
+			[
+				"mcm",
+				"~/repos/Scala/patmat/src/main/scala/patmat/MCMC.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 375.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 378.0
 	},
 	"settings":
 	{
