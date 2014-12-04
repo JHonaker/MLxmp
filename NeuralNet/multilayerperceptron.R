@@ -28,8 +28,12 @@ nnet <- function(inputs, hiddenlayers, hiddennodes, outputs) {
 predict.nnet = function(nnet, inputs, activation.fun = sigmoid) {
 	feedforward = function(input, network) {
 		if (length(network) == 0) input
-		else feedforward(activation.fun(network[[1]] %*% c(1, input)), network[-1])
+		else feedforward(network[[1]] %*% activation.fun(c(1, input)), network[-1])
 	}
 
 	feedforward(inputs, nnet)
+}
+
+backprop = function(nnet, inputs, outputs) {
+
 }
