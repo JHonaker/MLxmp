@@ -1,3 +1,3 @@
 # Utility functions common in machine learning
 
-sigmoid <- function(x) 1 / (1 + exp(-x))
+sigmoid <- Vectorize(function(x) 1 / (1 + exp(-x)))
