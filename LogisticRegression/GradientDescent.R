@@ -1,7 +1,7 @@
 # Logistic Regression:
 # Through Gradient Descent
 
-sigmoid <- function(x) 1 / (1 + exp(-x))
+source('../utility.R')
 
 cost <- function(z, y, h=sigmoid) {
     # This creates a convex function that we can optimize over. 
